@@ -1,0 +1,186 @@
+/*Gerais*/
+
+body {
+  font-family:'Roboto', sans-serif;
+
+}
+
+.row{
+  margin:0;
+
+}
+
+
+.conteiner {
+  padding: 70px 0;   
+}
+
+p, li {
+    color:#08010100;
+    font-size: 14px;
+}
+
+/* Barra de navegação */
+header, .navbar { 
+  background-color: #000000;
+}
+
+#nav-container {
+ padding-top: 0;
+ padding-bottom: 0;
+
+}
+
+#logo {
+   width: 75px; 
+  
+}
+.navbar-brand {
+    padding: 0;
+    color: #fff;
+  
+}
+.navbar-brand:hover {
+    color: #fff;
+
+}
+.navbar-links a {
+    color:#fff
+ 
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding:1rem .8rem;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0 auto; /* Center website */
+  max-width: 800px; /* Max width */
+  padding: 20px;
+}
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+
+.middle {
+  float: left;
+  width: 70%;
+  margin-top: 10px;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Slider */
+
+.container-fluid {
+  position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 50px;
+}
+
+#mainSlider .carousel-inner, #mainSlider .carousel-item {
+    height: 32rem;
+    background: #777;
+    color: white;
+    position:relative;
+}
+
+#mainSlider .carousel-caption {
+  top: 30%;
+}
+
+#mainSlider .carousel-caption h2 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+#mainSlider .carousel-caption p {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 100px;
+  color: #FFF;
+}
+
+.main-btn {
+  background-color:#777;
+  color: #FFF;
+  text-transform: uppercase;
+  width: 200px;
+  height: 60px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 3px solid transparent;
+  transition: .5s;
+}
+
+.main-btn:hover {
+  text-decoration: none;
+  color: #FFF;
+  background-color: transparent;
+  border-color: #777;
+}
+
+.carousel-indicators .active {
+  background-color: #777;
+}
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px ) {
+  .side, .middle {
+    width: 100%;
+  }
+
+    /* Hide the right column on small screens */
+  .right {
+    display: none;
+ }
+}

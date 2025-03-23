@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html data-ng-app="Proj" ng-controller="CatalokoCtrl" lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+
+    <!-- $REMOVE_IONIC-->
+    <base href="/" />
+    <title>Droper - Sneakers, Streetwear &amp; Colecion&#xE1;veis</title>
+
+
+        <link rel="preload" as="image" href="https://droper.app/angular/img/logo512.png" />
+
+    <meta name="description" content="Encontre seu sneaker 100% original no maior marketplace de compra e venda de sneaker, streetwear e colecion&#xE1;veis!" />
+    <meta property="og:title" content="Droper - Sneakers, Streetwear &amp; Colecion&#xE1;veis" />
+    <meta property="og:image" content="https://droper.app/angular/img/logo512.png" />
+    <meta property="og:description" content="Encontre seu sneaker 100% original no maior marketplace de compra e venda de sneaker, streetwear e colecion&#xE1;veis!" />
+    
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+    <link href="angular/img/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="sneakers, compra, venda, original, supreme, nike, jordan, off-white, nike off, palace, jordan 1, high, yeezy, yeezy original, adidas yeezy, air jordan">
+    <meta name="author" content="Droper">
+    <meta name="robots" content="index,follow">
+    <meta name="distribution" content="global">
+    <meta name="copyright" content="Copyright(c) 2023 Droper">
+
+   
+    <!-- ANGULAR JS MATERIAL-->
+    <link rel="stylesheet" href="angular/comp/angular-material/angular-material.min.css" />
+    
+     <!-- CSS -->
+    <link rel="stylesheet" href="angular/css/main/style.min.css?v=Chp5ICZFb-5JXruxVTPKgUAXzimw21t5wIzCe7uuozE" />
+
+    <link rel="alternate" href="https://droper.app" hreflang="x-default" />
+    <link rel="manifest" href="https://droper.app/angular/config/manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Droper">
+    <link rel="icon" sizes="192x192" href="angular/img/icon/favicon/android-chrome-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Droper">
+    <link rel="apple-touch-icon" href="angular/img/icon/favicon/apple-touch-icon.png">
+    <meta name="apple-itunes-app" content="app-id=1374613204">
+    <meta name="google-site-verification" content="m8PED7AnqB8RkONeZF7IjlyKFUxwu7l9e0oscJ2MbIk" />
+
+    <!-- REDIRECT (prod)-->
+    <script>
+        if ((!window.cordova) &&
+            (window.location.hostname != "localhost") &&
+            (window.location.protocol == "http:" || window.location.hostname.indexOf("www.") > -1)) {
+            window.location = window.location.href.replace("www.", "").replace("http:", "https:");
+        }
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MVKL4TM');
+    </script>   
+
+     <!-- LD+JSON -->
+</head>
+
+<body id="conteudo-principal" layout-fill style="height: auto;" ng-init="iscordova = $root.isCordova()">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVKL4TM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- APP LOADING -->
+    <div class="m-app-loading" id="ck-start-animation" ng-animate-children>
+        <img class="droper-animation" src="angular/img/loadapp/A.svg" alt="">
+    </div>
+
+    <!-- TOOLBAR -->
+    <span ng-include="'angular/app/navigation/toolbar.tpl.html'"></span>
+   
+    <!-- SIDENAV -->
+    <md-sidenav ng-include="'angular/app/navigation/sidenav.tpl.html'"
+                class="md-sidenav-right md-whiteframe-2dp"
+                md-component-id="right"></md-sidenav>
+
+    <!-- BARRA DE NAVEGAÇÃO MOBILE -->
+    <span ng-include="'angular/app/navigation/tabs.tpl.html'"></span>
+
+    <!-- Feedback de carregamneto da pagina -->
+    <div data-ng-if="$root.stateIsLoading && !iscordova" layout="row" layout-align="center center">
+        <md-progress-linear class="md-primary" md-mode="indeterminate"
+                            style="position: fixed; z-index:1;top:0px;"></md-progress-linear>
+    </div>
+
+    <!-- RENDER -->
+    <md-content id="ck-media-render" class="media-render" flex>
+        <div layout="column" flex data-ng-view autoscroll="true"></div>
+    </md-content>
+    
+    <!-- FOOTER -->
+    <span id="ck-footer" ng-include="'angular/app/navigation/footerV2.tpl.html'"></span>
+
+    <!-- AVISO LGPD-->
+    <span ng-init="verificarAvisoLGPD()"></span>
+
+    <!-- ARQUIVO DE MODULOS COMPACTADOS (angular, angular-route, angular-animate, angular-cookies, angular-message, angular-material)-->
+    <script src="angular/comp/angular.cat.js"></script>
+
+    <!-- INTERNO -->
+    <script src="angular/app/app.min.js?v=2An6c3gTSzhTp5GUgLXT5xe5xvoWschausRrjuR-UjQ"></script>
+    <script src="angular/config/constants.js"></script>
+
+    <script>
+        //ENABLE HTML5 MODE REMOVE BUG LOADING
+        angular.module("Proj").config(['$locationProvider', function ($locationProvider) {
+            $locationProvider.html5Mode(true);
+        }]);
+    </script>
+
+    <!-- EXTERNAL (MULTI PLATFORM)-->
+    <script src="angular/comp/krip/krip.js"></script>
+    <script async src="angular/comp/jquery.mousewheel/jquery.mousewheel.min.js"></script>
+    <script src="angular/comp/ngMask/ng-mask.min.js"></script>
+
+    <!-- GLIDER -->
+    <script src="angular/comp/glider/glider.js"></script>
+    <link rel="stylesheet" href="angular/comp/glider/glider.css" />
+
+    
+    <!-- HLS -->
+    <script src="angular/comp/hls/dist/hls.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148265371-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-148265371-1');
+    </script>
+   
+
+    <style>
+        * {
+            touch-action: manipulation;
+        }
+    </style>
+
+     <!-- PRELOAD -->
+
+    <!-- FONT -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700&display=swap' rel='stylesheet' />
+
+    <!-- DARK MODE-->
+    <link async rel="stylesheet" href="angular/css/dark.css" />
+</body>
+</html>
