@@ -24,3 +24,15 @@ jobs:
 
       - name: Invalidar Cache do CloudFront
         run: aws cloudfront create-invalidation --distribution-id ABC123XYZ --paths "/*"
+
+configurations:
+  - type: node
+    request: launch
+    name: Launch Program
+    program: "${workspaceFolder}/${input:programPath}"
+    args: []
+
+inputs:
+  - type: promptString
+    id: programPath
+    description: Path to your program file
