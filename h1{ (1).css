@@ -183,14 +183,4 @@ body {
   .right {
     display: none;
  }
-  
- .fa-star {
-  color: gray;
-  transition: color 0.3s;
-}
-
-.fa-star.checked {
-  color: gold;
-}
-
 }
