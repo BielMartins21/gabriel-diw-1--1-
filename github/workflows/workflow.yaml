@@ -20,7 +20,7 @@ jobs:
           aws configure set default.region us-east-1
 
       - name: Fazer Upload para o S3
-        run: aws s3 sync ./ s3://meusite-static --delete
+        run: aws s3 sync ./ s3://gabrieldiw1 --delete
 
       - name: Invalidar Cache do CloudFront
         run: aws cloudfront create-invalidation --distribution-id ABC123XYZ --paths "/*"
